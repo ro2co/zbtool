@@ -50,7 +50,7 @@ const Popup = () => {
           onClick={injectContentScript}>
           Click to inject Content Script
         </button>
-        <ToggleButton>Toggle theme</ToggleButton>
+        <ToggleButton>Toggle theme2</ToggleButton>
       </header>
     </div>
   );
