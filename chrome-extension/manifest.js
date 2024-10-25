@@ -29,7 +29,17 @@ const manifest = deepmerge(
     description: '__MSG_extensionDescription__',
     host_permissions: ['<all_urls>'],
     // permissions: ['storage', 'scripting', 'tabs', 'notifications'],
-    permissions: ['storage', 'scripting', 'notifications'],
+    // permissions: ['storage', 'scripting', 'notifications'],
+    permissions: [
+      'tabs',
+      'cookies',
+      'sidePanel',
+      'activeTab',
+      'scripting',
+      'storage',
+      'webRequest',
+      'declarativeNetRequest',
+    ],
     options_page: 'options/index.html',
     background: {
       service_worker: 'background.iife.js',
@@ -47,11 +57,11 @@ const manifest = deepmerge(
     },
     content_scripts: [
       {
-        matches: ['*://*.github.com/*'],
+        matches: ['<all_urls>'],
         js: ['content/index.iife.js'],
       },
       {
-        matches: ['*://*.github.com/*'],
+        matches: ['*://*.zaobao.com.sg/*', '*://localhost/*'],
         js: ['content-ui/index.iife.js'],
       },
       {
@@ -63,7 +73,7 @@ const manifest = deepmerge(
     web_accessible_resources: [
       {
         resources: ['*.js', '*.css', '*.svg', 'icon-128.png', 'icon-34.png'],
-        matches: ['*://*.github.com/*'],
+        matches: ['<all_urls>'],
       },
     ],
   },

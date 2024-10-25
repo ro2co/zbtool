@@ -28,3 +28,46 @@ code {
   border-radius: 0.25rem;
   padding: 0.2rem 0.5rem;
 }
+
+.box-title {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.box-title div {
+  flex: 1; 
+}
+
+.box-title button {
+  background: #8b4dff;
+  color: white;
+  height: 32px;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.tools-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  button {
+    border-radius: 16px;
+    flex: 1;
+    border: 1px solid #8b4dff;
+    width: 160px;
+    height: 36px;
+    margin-top: 16px;
+    transition: background 0.3s ease;
+    font-size: 14px;
+  }
+  button:hover {
+    background: #efefef; 
+  }
+  button:active {
+    background: #c0c0c0;
+  }
+
+}
